@@ -12,7 +12,7 @@ Simply install from PyPi:
 $ pip install python-auspost-pac
 ```
 
-It is reommended this be done in a virtualenv.
+It is recommended this be done in a virtualenv.
 
 ## Running tests
 
