@@ -8,7 +8,7 @@ setup(
     license='BSD',
     author='Sam Kingston',
     author_email='sam@sjkwi.com.au',
-    description='Python API for Australia Post's Postage Assessment Calculator (pac).',
+    description='Python API for Australia Post\'s Postage Assessment Calculator (pac).',
     url='https://github.com/sjkingo/python-auspost-pac',
     install_requires=[
         'requests',
