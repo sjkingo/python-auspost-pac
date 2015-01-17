@@ -10,7 +10,7 @@ It requires an API key to be created at the [Australia Post website](https://dev
 [![Supported Python versions](https://pypip.in/py_versions/python-auspost-pac/badge.svg?style=flat)](https://pypi.python.org/pypi/python-auspost-pac/)
 [![License](https://pypip.in/license/python-auspost-pac/badge.svg?style=flat)](https://github.com/sjkingo/python-auspost-pac/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/sjkingo/python-auspost-pac.svg?branch=master)](https://travis-ci.org/sjkingo/python-auspost-pac)
-[![Coverage Status](https://coveralls.io/repos/sjkingo/python-auspost-pac/badge.svg)](https://coveralls.io/r/sjkingo/python-auspost-pac)
+[![Coverage Status](https://coveralls.io/repos/sjkingo/python-auspost-pac/badge.svg?branch=master)](https://coveralls.io/r/sjkingo/python-auspost-pac?branch=master)
 
 ## Installation
 
