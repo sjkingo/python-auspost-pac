@@ -1,3 +1,4 @@
+from frozendict import frozendict
 
 class Locality(object):
     """
@@ -5,13 +6,22 @@ class Locality(object):
     """
 
     def __init__(self, locality_dict):
-        self._d = locality_dict
+        self._d = frozendict(locality_dict)
 
     def __str__(self):
         return self.location
 
     def __repr__(self):
         return '<Locality \'{}\'>'.format(self.location)
+
+    @property
+    def as_dict(self):
+        """
+        Return all the attributes as a dictionary. This may be useful for
+        caching purposes. The dictionary is mutable, unlike this object's
+        attributes.
+        """
+        return dict(self._d)
 
     @property
     def category(self):
