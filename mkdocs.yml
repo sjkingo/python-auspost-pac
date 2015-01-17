@@ -1,8 +1,12 @@
 site_name: python-auspost-pac
+site_author: Sam Kingston <sam@sjkwi.com.au>
 theme: readthedocs
-repo_url: https://github.com/sjkingo/python-auspost-pac
+repo_url: https://github.com/sjkingo/python-auspost-pac/
 pages:
     - ['index.md', 'python-auspost-pac']
-    - ['installation.md', 'Installation']
-    - ['api.md', 'API reference']
-    - ['testing.md', 'Running the tests']
+    - ['installation.md', 'Overview', 'Installation']
+    - ['testing.md', 'Overview', 'Running the tests']
+    - ['example.md', 'Overview', 'Example']
+    - ['api/index.md', 'API reference', 'auspost_pac']
+    - ['api/pac.md', 'API reference', 'auspost_pac.pac']
+    - ['api/models.md', 'API reference', 'auspost_pac.models']
