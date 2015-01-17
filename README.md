@@ -6,7 +6,7 @@ This includes support for looking up and validating postcodes and localities.
 
 It requires an API key to be created at the [Australia Post website](https://developers.auspost.com.au/apis/pacpcs-registration).
 
-[Full documentation](http://python-auspost-pac.readthedocs.org/en/latest/) is available. [![Documentation Status](https://readthedocs.org/projects/python-auspost-pac/badge/?version=latest)](https://readthedocs.org/projects/python-auspost-pac/?badge=latest)
+[Full documentation](http://python-auspost-pac.readthedocs.org/en/latest/) is available on Read the Docs.
 
 [![Latest Version](https://pypip.in/version/python-auspost-pac/badge.svg?style=flat)](https://pypi.python.org/pypi/python-auspost-pac/)
 [![Supported Python versions](https://pypip.in/py_versions/python-auspost-pac/badge.svg?style=flat)](https://pypi.python.org/pypi/python-auspost-pac/)
@@ -16,13 +16,13 @@ It requires an API key to be created at the [Australia Post website](https://dev
 
 ## Installation
 
-Simply install from PyPi:
+Simply install from PyPi (inside a virtualenv):
 
 ```
 $ pip install python-auspost-pac
 ```
 
-It is recommended this be done in a virtualenv.
+More detailed installation options are documented [here](http://python-auspost-pac.readthedocs.org/en/latest/installation/).
 
 ## Running tests
 
@@ -30,4 +30,4 @@ Our documentation has a section on [running the test suite](http://python-auspos
 
 ## API documentation
 
-[Full API documentation](http://python-auspost-pac.readthedocs.org/en/latest/api/) is available on ReadTheDocs.
+[Full API documentation](http://python-auspost-pac.readthedocs.org/en/latest/api/) is available on Read the Docs.
