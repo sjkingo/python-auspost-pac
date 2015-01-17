@@ -13,6 +13,10 @@ setup(
     install_requires=[
         'requests',
     ],
+    tests_require=[
+        'coverage',
+        'nose',
+    ],
     packages=find_packages(),
     classifiers=[
         'Development Status :: 4 - Beta',
