@@ -24,13 +24,5 @@ It is recommended this be done in a virtualenv.
 
 ## Running tests
 
-A full test suite is provided and can be run by checking out the source and
-running `nosetests`:
-
-```
-$ git clone https://github.com/sjkingo/python-auspost-pac.git
-$ nosetests --with-coverage --cover-package=auspost_pac
-```
-
 ## API documentation
 

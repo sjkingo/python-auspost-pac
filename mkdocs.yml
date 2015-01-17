@@ -1,0 +1,8 @@
+site_name: python-auspost-pac
+theme: readthedocs
+repo_url: https://github.com/sjkingo/python-auspost-pac
+pages:
+    - ['index.md', 'python-auspost-pac']
+    - ['installation.md', 'Installation']
+    - ['api.md', 'API reference']
+    - ['testing.md', 'Running the tests']
