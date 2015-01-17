@@ -4,3 +4,4 @@ __pycache__
 /.coverage
 /python_auspost_pac.egg-info/
 /build
+/dist
