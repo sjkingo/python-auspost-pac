@@ -35,6 +35,12 @@ class PAC(object):
         default).
         """
 
+        if type(query) not in [str, int]:
+            raise ValueError('query argument must be a str or int')
+
+        if type(query) == str and len(query) == 0:
+            raise ValueError('query argument must not be empty')
+
         url = 'postcode/search'
         pbf = True if exclude_postbox else None
 
