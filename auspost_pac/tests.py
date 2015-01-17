@@ -128,3 +128,20 @@ class TestLocalityLookup(BaseTestCase):
         self.assertEqual(len(r), 1)
         self.assertIsInstance(r[0], Locality)
 
+class TestModels(BaseTestCase):
+    def test_locality_model(self):
+        """
+        Validates the Locality class yields the correct attributes.
+        """
+        r = self.api.locality_search('Ocean View', state='QLD')
+        l = r[0]
+        self.assertEqual(str(l), 'OCEAN VIEW')
+        self.assertEqual(repr(l), '<Locality \'OCEAN VIEW\'>')
+        self.assertEqual(l.category, 'Delivery Area')
+        self.assertEqual(l.id, 10210)
+        self.assertEqual(l.latitude, -27.143427)
+        self.assertEqual(l.longitude, 152.817476)
+        self.assertEqual(l.location, 'OCEAN VIEW')
+        self.assertEqual(l.postcode, 4521)
+        self.assertEqual(l.state, 'QLD')
+        self.assertEqual(l.as_dict, dict(l._d))
