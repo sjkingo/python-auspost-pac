@@ -3,5 +3,5 @@ __pycache__
 *.swp
 /.coverage
 /python_auspost_pac.egg-info/
-/build
-/dist
+/build/
+/dist/
