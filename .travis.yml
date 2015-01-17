@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.3"
+  - "3.4"
+sudo: false
+branches:
+    only:
+        - master
+install:
+    pip install .
+script: 
+    ./test.sh
+after_success:
+    coveralls
