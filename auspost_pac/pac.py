@@ -1,6 +1,6 @@
 import requests
 
-from .models import Locality
+from .models import *
 
 class PAC(object):
     """
@@ -53,3 +53,19 @@ class PAC(object):
             locality_list = [locality_list]
 
         return [Locality(l) for l in locality_list]
+
+    def domestic_parcel_services(self, from_postcode, to_postcode, parcel):
+        """
+        Returns the available services for a domestic parcel, given the
+        from_postcode, to_postcode and Parcel instance.
+        """
+
+        if type(parcel) != Parcel:
+            raise ValueError('parcel argument must be a models.Parcel instance')
+
+        url = 'postage/parcel/domestic/service'
+        r = self._make_request(url, from_postcode=from_postcode,
+                to_postcode=to_postcode, length=parcel.length,
+                width=parcel.width, height=parcel.height, weight=parcel.weight)
+
+        return [PostageService(d) for d in r['services']['service']]

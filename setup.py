@@ -11,6 +11,7 @@ setup(
     description='Python API for Australia Post\'s Postage Assessment Calculator (pac).',
     url='https://github.com/sjkingo/python-auspost-pac',
     install_requires=[
+        'cached_property',
         'coverage',
         'coveralls',
         'frozendict',
