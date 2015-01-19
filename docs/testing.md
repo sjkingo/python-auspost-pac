@@ -11,7 +11,7 @@ $ cd python-auspost-pac
 Some extra dependencies are required:
 
 ```
-$ pip install nose coveralls
+$ pip install nose coveralls coverage
 ```
 
 Now you can run the tests:

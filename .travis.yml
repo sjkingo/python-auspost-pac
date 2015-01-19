@@ -8,6 +8,7 @@ branches:
         - master
 install:
     pip install .
+    pip install coverage coveralls nose
 script: 
     ./test.sh
 after_success:

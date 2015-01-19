@@ -12,10 +12,7 @@ setup(
     url='https://github.com/sjkingo/python-auspost-pac',
     install_requires=[
         'cached_property',
-        'coverage',
-        'coveralls',
         'frozendict',
-        'nose',
         'requests',
     ],
     packages=find_packages(),
