@@ -144,7 +144,7 @@ class TestLocalityModel(BaseTestCase):
         self.assertEqual(str(l), 'OCEAN VIEW')
         self.assertEqual(repr(l), '<Locality \'OCEAN VIEW\'>')
         self.assertEqual(l.category, 'Delivery Area')
-        self.assertEqual(l.id, 10210)
+        self.assertEqual(l.id, 10019)
         self.assertEqual(l.latitude, -27.143427)
         self.assertEqual(l.longitude, 152.817476)
         self.assertEqual(l.location, 'OCEAN VIEW')
@@ -207,7 +207,7 @@ class TestDomesticParcelLookup(BaseTestCase):
         expected_dict = {
             'AUS_PARCEL_REGULAR': {
                 'name': 'Parcel Post',
-                'price': Decimal('13.50'),
+                'price': Decimal('13.95'),
                 'max_extra_cover': 5000,
             },
             'AUS_PARCEL_REGULAR_SATCHEL_3KG': {
@@ -217,7 +217,7 @@ class TestDomesticParcelLookup(BaseTestCase):
             },
             'AUS_PARCEL_EXPRESS': {
                 'name': 'Express Post',
-                'price': Decimal('19.10'),
+                'price': Decimal('19.70'),
                 'max_extra_cover': 5000,
             },
             'AUS_PARCEL_EXPRESS_SATCHEL_3KG': {

@@ -4,6 +4,7 @@
 
 * Fixed incorrect currency values by properly rounding - this seems to be a bug in the
   AusPost API
+* Updated test data prices and ID as AusPost have changed them
 
 ## 1.0.0 - 2015-01-19
 
