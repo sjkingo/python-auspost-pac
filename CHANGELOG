@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2016-02-12
+
+* Fixed incorrect currency values by properly rounding - this seems to be a bug in the
+  AusPost API
+
 ## 1.0.0 - 2015-01-19
 
 * Added domestic parcel search

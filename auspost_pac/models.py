@@ -1,6 +1,13 @@
 from cached_property import cached_property
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 from frozendict import frozendict
+
+def round_currency(dec):
+    """
+    Correctly rounds the decimal value as per usual currency rules.
+    e.g.: Decimal('12.9699999999') becomes Decimal('12.97')
+    """
+    return dec.quantize(Decimal('.01'), rounding=ROUND_HALF_UP)
 
 class Locality(object):
     """
@@ -89,7 +96,7 @@ class PostageService(object):
 
     @property
     def max_extra_cover(self):
-        return Decimal(str(self._d.get('max_extra_cover')))
+        return round_currency(Decimal(str(self._d.get('max_extra_cover'))))
 
     @property
     def name(self):
@@ -102,7 +109,7 @@ class PostageService(object):
 
     @property
     def price(self):
-        return Decimal(self._d.get('price'))
+        return round_currency(Decimal(self._d.get('price')))
 
 class ServiceOption(object):
     """
