@@ -193,6 +193,7 @@ class TestDomesticParcelLookup(BaseTestCase):
         self.parcel = Parcel(width=10, length=10, height=10, weight=1)
         super(TestDomesticParcelLookup, self).setUp()
         self.p = self.api.domestic_parcel_services(4000, 2000, self.parcel)
+        self.p_exclude_prepaid = self.api.domestic_parcel_services(4000, 2000, self.parcel, include_prepaid=False)
 
     def test_str(self):
         self.assertEqual(str(self.p[0]), self.p[0].name)
@@ -277,3 +278,28 @@ class TestDomesticParcelLookup(BaseTestCase):
         del d['suboptions']
         o = ServiceOption(d)
         self.assertEqual(o.suboptions, [])
+
+    def test_valid_regular_parcel_exclude_prepaid(self):
+        self.assertIs(type(self.p_exclude_prepaid), list)
+        self.assertEqual(len(self.p_exclude_prepaid), 2)
+
+        expected_dict = {
+            'AUS_PARCEL_REGULAR': {
+                'name': 'Parcel Post',
+                'price': Decimal('13.95'),
+                'max_extra_cover': 5000,
+            },
+            'AUS_PARCEL_EXPRESS': {
+                'name': 'Express Post',
+                'price': Decimal('19.70'),
+                'max_extra_cover': 5000,
+            },
+        }
+        self.assertCountEqual([o.code for o in self.p_exclude_prepaid], expected_dict.keys())
+
+        for option in self.p_exclude_prepaid:
+            self.assertIs(type(option), PostageService)
+            expected_o = expected_dict[option.code]
+            self.assertEqual(option.name, expected_o['name'])
+            self.assertEqual(option.price, expected_o['price'])
+            self.assertEqual(option.max_extra_cover, expected_o['max_extra_cover'])

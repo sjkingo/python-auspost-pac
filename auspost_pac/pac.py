@@ -54,10 +54,13 @@ class PAC(object):
 
         return [Locality(l) for l in locality_list]
 
-    def domestic_parcel_services(self, from_postcode, to_postcode, parcel):
+    def domestic_parcel_services(self, from_postcode, to_postcode, parcel, include_prepaid=True):
         """
         Returns the available services for a domestic parcel, given the
         from_postcode, to_postcode and Parcel instance.
+        
+        **Added in 1.0.2:** If include_prepaid is False, will exclude any
+        prepaid services.
         """
 
         if type(parcel) != Parcel:
@@ -68,4 +71,7 @@ class PAC(object):
                 to_postcode=to_postcode, length=parcel.length,
                 width=parcel.width, height=parcel.height, weight=parcel.weight)
 
-        return [PostageService(d) for d in r['services']['service']]
+        if include_prepaid:
+            return [PostageService(d) for d in r['services']['service']]
+        else:
+            return [PostageService(d) for d in r['services']['service'] if 'Satchel' not in d['name']]

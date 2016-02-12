@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 - 2016-02-12
+
+* Added `include_prepaid=True` argument to domestic parcel lookup to allow
+  filtering by prepaid services
+
 ## 1.0.1 - 2016-02-12
 
 * Fixed incorrect currency values by properly rounding - this seems to be a bug in the
